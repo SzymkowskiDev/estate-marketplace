@@ -59,7 +59,7 @@ Description.
 
 
 ## 🗃️ Data
-Entity Reltionship Diagram
+Entity Relationship Diagram
 ![erd](https://github.com/SzymkowskiDev/estate-marketplace/blob/main/assets/erd.PNG?raw=true)
 
 
