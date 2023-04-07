@@ -1,15 +1,7 @@
 🔗 [Kanban board](https://github.com/users/SzymkowskiDev/projects/10/views/1)
 
 # Estate Marketplace
-Lessons learned from Workforce Data Platform, we start with:
-- sourced data
-- docker setup
-- relational database (filled with data)
-- key-value database (filled with data)
-
-We focus on:
-- REST API development
-- Django app development
+Lessons learned from Workforce Data Platform, we start with: sourced data, docker setup, relational database and key-value database (both filled with data). We focus on Python development of: REST API and Django app.
 
 
 ## 🔗 Related Projects
