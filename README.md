@@ -38,24 +38,19 @@ Description.
 - [ ] Django skeleton
 - [ ] FastAPI skeleton
 
-**REST API development (FastAPI)**
+**REST API development - Microservices (FastAPI)**
 
-- [ ] Authentication
-- [ ] CRUD operations to relational database
-- [ ] CRUD operations to key-value database
-- [ ] component
-- [ ] component
-- [ ] component
-- [ ] component
-- [ ] component
-- [ ] component
-
+- [ ] `auth` Authentication
+- [ ] `buyers_client` CRUD operations on Buyers table
+- [ ] `sellers_client` CRUD operations on Sellers table
+- [ ] `analytics_client` Produces statistics from Offers table
 
 **Web app development (Django)**
 
 - [ ] Authentication
-- [ ] Seller panel
-- [ ] Buyer panel
+- [ ] Seller panel makes requests to `buyers_client`
+- [ ] Buyer panel makes requests to `sellers_client` and `buyers_client`
+- [ ] Admin panel - views all data
 
 
 ## 🗃️ Data
