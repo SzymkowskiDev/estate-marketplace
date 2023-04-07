@@ -12,6 +12,10 @@ We focus on:
 - Django app development
 
 
+## 🔗 Related Projects
+* First edition: [Workfroce Data Platform](https://github.com/SzymkowskiDev/workforce-data-platform)
+
+
 ## 🏛️ Architecture
 ![architecture](https://github.com/SzymkowskiDev/estate-marketplace/blob/main/assets/arch.png?raw=true)
 
@@ -54,8 +58,9 @@ Description.
 - [ ] Buyer panel
 
 
-## 🔗 Related Projects
-* First edition: [Workfroce Data Platform](https://github.com/SzymkowskiDev/workforce-data-platform)
+## 🗃️ Data
+Entity Reltionship Diagram
+![erd](https://github.com/SzymkowskiDev/estate-marketplace/blob/main/assets/erd.PNG?raw=true)
 
 
 ## 🎓 Learning Materials
