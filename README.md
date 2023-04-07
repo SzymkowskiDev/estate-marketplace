@@ -1,119 +1,56 @@
+🔗 [Kanban board](https://github.com/users/SzymkowskiDev/projects/9/views/1)
 
-# Project Title
-📊 Size, dependencies, version, code coverage
+# Employee Data Platform
+Lessons learned from Workforce Data Platform, we start with:
+- sourced data
+- docker setup
+- relational database (filled with data)
+- key-value database (filled with data)
 
-Short description.
+We focus on:
+- REST API development
+- Django app development
 
-## Contents
-Table of contents goes here
+
+## 🏛️ Architecture
+![architecture](https://github.com/SzymkowskiDev/employee-data-platform/blob/master/assets/arch.png?raw=true)
+
 
 ## 📋 Requirements
-Sth.
-
-## ⭐ Features
-Introductory sentance.
-
-⭐ **Feature 1**
-
-Description of feature 1.
-
-⭐ **Feature 2**
-
-Description of feature 2.
-
-## 📝 Examples
-**Example 1. Title**
-
-Description of the example.
-```javascript
-CODE GOES HERE
-```
-**Example 2. Title**
-
-Description of the example.
-```javascript
-CODE GOES HERE
-```
-
-## 👨‍💻 Contributing
-Sth
-
-## 📦 Builds
-Sth
-
-## 📂 Directory Structure
-Sth
-
-## 📅 Release schedule / Development schedule / Plans / TODOs
-**Version 1.0.0**
-
-- [x] Feature 1
-- [x] Feature 2
-- [x] Feature 3
-
-**Version 2.0.0**
-
-- [ ] Feature 4
-- [ ] Feature 5
-- [ ] Feature 6
-
-## 🆕 Changelog
-A changelog is a file which contains a curated, chronologically ordered list of notable changes for each version of a project.
-
-## ⚙ Configurations
-Sth
-
-## 💡 Tips
-💭 **Tip 1**
-
-Description of tip 1.
-
-💭 **Tip 2**
-
-Description of tip 1.
-
-## 🚧 Warnings / Common Errors / Known Issues
-
-⚠️ **Warning 1**
-
-Description of warning 1.
-
-⚠️ **Warning 2**
-
-Description of warning 2.
-
-## 🧰 Troubleshooting
-🚩 **Error 1**
-
-Solution to error 1.
-
-``` SOLUTION CODE ```
-
-🚩 **Error 2**
-
-Solution to error 2.
+- Docker (so, WSL2 too)
 
 
-``` SOLUTION CODE ```
-
-## 🚀 Upgrading
+## 🚀 How to run
 Description.
 
-## 📖 Documentation
-Link to the wiki or external site.
 
-## 🔗 Related Projects / Thanks / References / Acknowledgement 
-* Description 1 [Name 1](http://markdown.github.io)
-* Description 2 [Name 2](http://markdown.github.io)
-* Description 3 [Name 3](http://markdown.github.io)
+## 📅 Development schedule
+**Version 1.0.0**
+
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
+
+
+## 🔗 Related Projects
+* First edition: [Workfroce Data Platform](https://github.com/SzymkowskiDev/workforce-data-platform)
+
 
 ## 🎓 Learning Materials
 * Description 1 [Name 1](http://markdown.github.io)
 * Description 2 [Name 2](http://markdown.github.io)
 * Description 3 [Name 3](http://markdown.github.io)
 
-## 📧 Contact
-[![](https://img.shields.io/twitter/url?label=/kamil-szymkowski/&logo=linkedin&logoColor=%230077B5&style=social&url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fkamil-szymkowski%2F)](https://www.linkedin.com/in/kamil-szymkowski/) [![](https://img.shields.io/twitter/url?label=@szymkowskidev&logo=medium&logoColor=%23292929&style=social&url=https%3A%2F%2Fmedium.com%2F%40szymkowskidev)](https://medium.com/@szymkowskidev) [![](https://img.shields.io/twitter/url?label=/SzymkowskiDev&logo=github&logoColor=%23292929&style=social&url=https%3A%2F%2Fgithub.com%2FSzymkowskiDev)](https://github.com/SzymkowskiDev)
+
+## 👨‍💻 Contributing
+- a
+- b
+- c
+- d
+- e
+- f
+- g
+
 
 ## 📄 License
 [MIT License](https://choosealicense.com/licenses/mit/) ©️ 2019-2020 [Kamil Szymkowski](https://github.com/SzymkowskiDev "Get in touch!")
@@ -124,3 +61,61 @@ Link to the wiki or external site.
 
 
 
+🔗 [Kanban board](https://github.com/users/SzymkowskiDev/projects/9/views/1)
+
+# Employee Data Platform
+Lessons learned from Workforce Data Platform, we start with:
+- sourced data
+- docker setup
+- relational database (filled with data)
+- key-value database (filled with data)
+
+We focus on:
+- REST API development
+- Django app development
+
+
+## 🏛️ Architecture
+![architecture](https://github.com/SzymkowskiDev/employee-data-platform/blob/master/assets/arch.png?raw=true)
+
+
+## 📋 Requirements
+- Docker (so, WSL2 too)
+
+
+## 🚀 How to run
+Description.
+
+
+## 📅 Development schedule
+**Version 1.0.0**
+
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
+
+
+## 🔗 Related Projects
+* First edition: [Workfroce Data Platform](https://github.com/SzymkowskiDev/workforce-data-platform)
+
+
+## 🎓 Learning Materials
+* Description 1 [Name 1](http://markdown.github.io)
+* Description 2 [Name 2](http://markdown.github.io)
+* Description 3 [Name 3](http://markdown.github.io)
+
+
+## 👨‍💻 Contributing
+- a
+- b
+- c
+- d
+- e
+- f
+- g
+
+
+## 📄 License
+[MIT License](https://choosealicense.com/licenses/mit/) ©️ 2019-2020 [Kamil Szymkowski](https://github.com/SzymkowskiDev "Get in touch!")
+
+[![](https://img.shields.io/badge/license-MIT-green?style=plastic)](https://choosealicense.com/licenses/mit/)
