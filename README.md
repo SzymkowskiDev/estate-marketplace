@@ -30,6 +30,11 @@ Description.
 
 ## 📅 Development schedule
 
+- 13/05/2023: Introductory meeting & Start of Sprint 1
+- 27/05/2023: Sprint 1 review
+- 10/06/2023: Sprint 2 review
+- 24/06/2023: Sprint 3 review & Demo Day
+
 **Pre-development: System Architecture**
 
 - [ ] Docker setup
@@ -51,6 +56,7 @@ Description.
 - [ ] Seller panel makes requests to `buyers_client`
 - [ ] Buyer panel makes requests to `sellers_client` and `buyers_client`
 - [ ] Admin panel - views all data
+- [ ] Analytics panel
 
 
 ## 🗃️ Data
