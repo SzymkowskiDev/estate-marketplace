@@ -25,11 +25,33 @@ Description.
 
 
 ## 📅 Development schedule
-**Version 1.0.0**
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
+**Pre-development: System Architecture**
+
+- [ ] Docker setup
+- [ ] Postgres setup
+- [ ] Redis setup
+- [ ] Django skeleton
+- [ ] FastAPI skeleton
+
+**REST API development (FastAPI)**
+
+- [ ] Authentication
+- [ ] CRUD operations to relational database
+- [ ] CRUD operations to key-value database
+- [ ] component
+- [ ] component
+- [ ] component
+- [ ] component
+- [ ] component
+- [ ] component
+
+
+**Web app development (Django)**
+
+- [ ] Authentication
+- [ ] Seller panel
+- [ ] Buyer panel
 
 
 ## 🔗 Related Projects
@@ -37,9 +59,13 @@ Description.
 
 
 ## 🎓 Learning Materials
-* Description 1 [Name 1](http://markdown.github.io)
-* Description 2 [Name 2](http://markdown.github.io)
-* Description 3 [Name 3](http://markdown.github.io)
+* How to install `docker` for Windows [docs.docker.com](https://docs.docker.com/desktop/install/windows-install/)
+* `Postgres` documentation [postgresql.org](https://www.postgresql.org/)
+* `psycopg2` documentation [psycopg.org](https://www.psycopg.org/docs/)
+* `Redis` documentation [redis.io](https://redis.io/)
+* How to use `redis` with Python [realpython.com](https://realpython.com/python-redis/)
+* `FastAPI` documentation [fastapi.tiangolo.com](https://fastapi.tiangolo.com/)
+* `Django` documentation [djangoproject.com](https://www.djangoproject.com/)
 
 
 ## 👨‍💻 Contributing
