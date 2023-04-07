@@ -1,6 +1,6 @@
-🔗 [Kanban board](https://github.com/users/SzymkowskiDev/projects/9/views/1)
+🔗 [Kanban board](https://github.com/users/SzymkowskiDev/projects/10/views/1)
 
-# Employee Data Platform
+# Estate Marketplace
 Lessons learned from Workforce Data Platform, we start with:
 - sourced data
 - docker setup
