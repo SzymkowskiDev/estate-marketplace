@@ -12,12 +12,30 @@ Lessons learned from Workforce Data Platform, we start with: sourced data, docke
 ![architecture](https://github.com/SzymkowskiDev/estate-marketplace/blob/main/assets/arch.png?raw=true)
 
 
-## 📋 Requirements
-- Docker (so, WSL2 too)
+## 🚀 How to get started?
+Step 1. Install Docker Desktop [https://docs.docker.com/desktop/install/windows-install/](https://docs.docker.com/desktop/install/windows-install/)
 
+Step 2. Clone the repository `git clone https://github.com/SzymkowskiDev/estate-marketplace.git`
 
-## 🚀 How to run
-Description.
+Step 3. Launch Docker Desktop
+
+Step 4. Open terminal in the project and run build docker image: `docker build -t estate-db .`
+
+Step 5. Start the container: `docker-compose up -d`
+
+Step 6. Create the database:
+
+    Step 6.1 Identify container id with: `docker ps` 
+
+    Step 6.2 Open a terminal session inside the container: `docker exec -it <paste here container id> bash`
+
+    Step 6.3 Connect to the PostgreSQL server running inside the container: `psql -U postgres`
+
+    Step 6.4 Create the estate database by running the command: `CREATE DATABASE estate;`
+
+    Step 6.5 Exit postgres CLI with: `\q` and terminal session with: `exit`
+
+Step 7. Navigate to src/main.py and run the script.
 
 
 ## 📅 Development schedule
