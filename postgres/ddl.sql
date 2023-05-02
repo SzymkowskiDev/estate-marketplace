@@ -8,7 +8,7 @@ CREATE TABLE
         location VARCHAR(255),
         price VARCHAR(255),
         price_per_meter VARCHAR(255),
-        number_of_rooms INTEGER,
+        number_of_rooms VARCHAR(255),
         description TEXT,
         floor VARCHAR(255),
         rent VARCHAR(255),

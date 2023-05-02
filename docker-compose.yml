@@ -1,13 +1,15 @@
 version: '3'
 services:
   db:
-    build: .
+    build:
+      context: ./postgres
     ports:
       - "5432:5432"
     volumes:
       - dbdata:/var/lib/postgresql/data
     networks:
       - scrap-masters
+
 volumes:
   dbdata:
 

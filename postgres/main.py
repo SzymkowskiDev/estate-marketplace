@@ -5,7 +5,7 @@ import utilities
 utilities.create_tables()
 
 # # Populate database
-utilities.populate_db(file_path='src/sample_data.json', table='OFFERS')
+utilities.populate_db(file_path='postgres/sample_data.json', table='OFFERS')
 
 # # Query table
 conn = utilities.connect_to_db()

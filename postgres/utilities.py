@@ -21,7 +21,7 @@ def create_tables():
     cur = conn.cursor()
 
     # Create tables
-    with open('src/ddl.sql', 'r') as f:
+    with open('postgres/ddl.sql', 'r') as f:
         sql = f.read()
     cur.execute(sql)
 
@@ -42,7 +42,7 @@ def populate_db(file_path, table):
     cur = conn.cursor()
 
     # Load sample data
-    with open('src/sample_data.json') as f:
+    with open('postgres/sample_data.json') as f:
         sample_data = json.load(f)
 
     # Populate table with sample data
