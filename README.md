@@ -17,13 +17,19 @@ Step 1. Install Docker Desktop [https://docs.docker.com/desktop/install/windows-
 
 Step 2. Clone the repository `git clone https://github.com/SzymkowskiDev/estate-marketplace.git`
 
+Step 2.5 Replicate python environment
+- Step 2.5 Create a virtual environment and activate it: 
+    - `python -m venv myenv`
+    - `myenv\Scripts\activate.bat`
+- Step 2.5 B) Install dependencies: `pip install -r requirements.txt`
+
 Step 3. Launch Docker Desktop
 
 Step 4. Open terminal in the project and run build docker image: `docker build -t estate-db .`
 
 Step 5. Start the container: `docker-compose up -d`
 
-Step 6. Create the database:
+Step 6. Create the postgres database:
 
 - Step 6.1 Identify container id with: `docker ps` 
 
@@ -35,7 +41,7 @@ Step 6. Create the database:
 
 - Step 6.5 Exit postgres CLI with: `\q` and terminal session with: `exit`
 
-Step 7. Navigate to src/main.py and run the script.
+Step 7. Populate relational database by executing script `postgres/populate.py`
 
 
 ## 📅 Development schedule

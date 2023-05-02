@@ -1,13 +1,7 @@
 import psycopg2
 import utilities
 
-# Create tables
-utilities.create_tables()
-
-# # Populate database
-utilities.populate_db(file_path='postgres/sample_data.json', table='OFFERS')
-
-# # Query table
+# Query table
 conn = utilities.connect_to_db()
 cur = conn.cursor()
 cur.execute("SELECT title FROM OFFERS;")
