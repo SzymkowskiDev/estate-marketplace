@@ -46,10 +46,10 @@ Step 7. Populate relational database by executing script `postgres/populate.py`
 
 ## 📅 Development schedule
 
-- 13/05/2023: Introductory meeting & Start of Sprint 1
-- 27/05/2023: Sprint 1 review
-- 10/06/2023: Sprint 2 review
-- 24/06/2023: Sprint 3 review & Demo Day
+- 20/05/2023: Introductory meeting & Start of Sprint 1
+- 03/06/2023: Sprint 1 review
+- 17/06/2023: Sprint 2 review
+- (01/07/2023: Sprint 3 review & Demo Day) optional
 
 **Pre-development: System Architecture**
 
