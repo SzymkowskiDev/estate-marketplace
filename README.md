@@ -25,7 +25,7 @@ Step 2.5 Replicate python environment
 
 Step 3. Launch Docker Desktop
 
-Step 4. Open terminal in the project and run build docker image: `docker build -t estate-db .`
+~~`Step 4. Open terminal in the project and run build docker image: `docker build -t estate-db .`~~
 
 Step 5. Start the container: `docker-compose up -d`
 

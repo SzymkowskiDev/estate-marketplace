@@ -9,9 +9,19 @@ services:
       - dbdata:/var/lib/postgresql/data
     networks:
       - scrap-masters
+  redis:
+    build:
+      context: ./redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+    networks:
+      - scrap-masters
 
 volumes:
   dbdata:
+  redisdata:
 
 
 networks:
