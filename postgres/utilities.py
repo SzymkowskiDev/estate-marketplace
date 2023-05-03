@@ -21,7 +21,7 @@ def create_tables():
     cur = conn.cursor()
 
     # Create tables
-    with open('postgres/ddl.sql', 'r') as f:
+    with open('postgres/estate.sql', 'r') as f:
         sql = f.read()
     cur.execute(sql)
 

@@ -53,11 +53,11 @@ Step 7. Populate relational database by executing script `postgres/populate.py`
 
 **Pre-development: System Architecture**
 
-- [ ] Docker setup
-- [ ] Postgres setup
-- [ ] Redis setup
+- [x] Docker setup
+- [x] Postgres setup
+- [x] Redis setup
 - [ ] Django skeleton
-- [ ] FastAPI skeleton
+- [x] FastAPI skeleton
 
 **REST API development - Microservices (FastAPI)**
 
