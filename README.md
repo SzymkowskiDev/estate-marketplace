@@ -62,7 +62,7 @@ Step 9. Run the app:
 - [x] Docker setup
 - [x] Postgres setup
 - [x] Redis setup
-- [ ] Django skeleton
+- [x] Django skeleton
 - [x] FastAPI skeleton
 
 **REST API development - Microservices (FastAPI)**
