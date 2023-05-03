@@ -43,6 +43,12 @@ Step 6. Create the postgres database:
 
 Step 7. Populate relational database by executing script `postgres/populate.py`
 
+Step 8. Populate key-valye database by executing script `redis/populate.py`
+
+Step 9. Run the app:
+- A) To run FastAPI app run the command: `uvicorn main:app --reload` and open [http://127.0.0.1:8000](http://127.0.0.1:8000)
+- B) To run Django app run the command: `python manage.py runserver` and open [http://127.0.0.1:8000/](http://127.0.0.1:8000/) 
+
 
 ## 📅 Development schedule
 
