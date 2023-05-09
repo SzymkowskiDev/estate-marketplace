@@ -91,6 +91,7 @@ Our data comprises of:
 Entity Relationship Diagram
 ![erd](https://github.com/SzymkowskiDev/estate-marketplace/blob/main/assets/erd.PNG?raw=true)
 
+While offers, sellers and buyers data is held in relational database, transactions are stored in key-value database.
 
 ## 🎓 Learning Materials
 * How to install `docker` for Windows [docs.docker.com](https://docs.docker.com/desktop/install/windows-install/)
