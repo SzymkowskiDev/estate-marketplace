@@ -82,6 +82,12 @@ Step 9. Run the app:
 
 
 ## 🗃️ Data
+Our data comprises of:
+- 4657 real estate offers
+- 3000 sellers
+- 2000 buyers
+- 1000 transactions involving these three entities
+
 Entity Relationship Diagram
 ![erd](https://github.com/SzymkowskiDev/estate-marketplace/blob/main/assets/erd.PNG?raw=true)
 

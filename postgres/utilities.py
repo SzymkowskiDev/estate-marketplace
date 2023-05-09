@@ -1,6 +1,8 @@
 import psycopg2
 import json
-
+import random
+import string
+from faker import Faker
 
 def connect_to_db():
 
@@ -31,7 +33,7 @@ def create_tables():
     # conn.close()
 
 
-def populate_db(file_path, table):
+def populate_offers_db(file_path):
 
     # Open file
     with open(file_path) as f:
@@ -41,13 +43,9 @@ def populate_db(file_path, table):
 
     cur = conn.cursor()
 
-    # Load sample data
-    with open('postgres/sample_data.json') as f:
-        sample_data = json.load(f)
-
     # Populate table with sample data
     for offer in sample_data:
-        print("Populating table...")
+        print("Populating 'OFFERS' table...")
         sql = """
         INSERT INTO OFFERS (
             title,
@@ -111,9 +109,89 @@ def populate_db(file_path, table):
         """
         cur.execute(sql, offer)
 
-    # cur.execute("SELECT title, price FROM OFFERS;")
-    # result = cur.fetchall()
-    # print(result)
+    # Close communication with the database
+    cur.close()
+    conn.commit()
+    conn.close()
+
+
+def generate_data(num_records, file_path):
+    fake = Faker()
+    data = []
+    for i in range(num_records):
+        first_name = fake.first_name()
+        last_name = fake.last_name()
+        email = f"{first_name.lower()}.{last_name.lower()}@example.com"
+        mobile = ''.join(random.choices(string.digits, k=10))
+        record = {"first_name": first_name, "last_name": last_name, "email": email, "mobile": mobile}
+        data.append(record)
+
+    with open(file_path, 'w') as f:
+        json.dump(data, f)
+
+
+def populate_buyers_db(file_path):
+
+    # Open file
+    with open(file_path) as f:
+        sample_data = json.load(f)
+
+    conn = connect_to_db()
+
+    cur = conn.cursor()
+
+    # Populate table with sample data
+    for offer in sample_data:
+        print("Populating 'BUYERS' table...")
+        sql = """
+        INSERT INTO BUYERS (
+            first_name,
+            last_name,
+            email,
+            mobile
+        ) VALUES (
+            %(first_name)s,
+            %(last_name)s,
+            %(email)s,
+            %(mobile)s
+        );
+        """
+        cur.execute(sql, offer)
+
+    # Close communication with the database
+    cur.close()
+    conn.commit()
+    conn.close()
+
+
+def populate_sellers_db(file_path):
+
+    # Open file
+    with open(file_path) as f:
+        sample_data = json.load(f)
+
+    conn = connect_to_db()
+
+    cur = conn.cursor()
+
+    # Populate table with sample data
+    for offer in sample_data:
+        print("Populating 'SELLERS' table...")
+        sql = """
+        INSERT INTO SELLERS (
+            first_name,
+            last_name,
+            email,
+            mobile
+        ) VALUES (
+            %(first_name)s,
+            %(last_name)s,
+            %(email)s,
+            %(mobile)s
+        );
+        """
+        cur.execute(sql, offer)
+
     # Close communication with the database
     cur.close()
     conn.commit()
