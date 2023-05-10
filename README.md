@@ -88,10 +88,16 @@ Our data comprises of:
 - 2000 buyers
 - 1000 transactions involving these three entities
 
-Entity Relationship Diagram
+__Entity Relationship Diagram__
+
 ![erd](https://github.com/SzymkowskiDev/estate-marketplace/blob/main/assets/erd.PNG?raw=true)
 
-While offers, sellers and buyers data is held in relational database, transactions are stored in key-value database.
+While offers, sellers and buyers data is held in relational database, transactions are stored in key-value database. Example of key-value pair: ``"offer_1496_seller_2997_buyer_1231_date_2020-07-12": "aborted"``
+
+We can note, that keys hold IDs of offers as well as those of parties involved and the date. Values on the other hand represent the status of each transaction. Possible statuses are: 
+
+`placed` (buyer asks to buy) -> `accepted` (seller accepted, awaiting payment) -> `completed` (buyer made payment) and `aborted` (any system error or unexpected situation in the business flow)
+
 
 ## 🎓 Learning Materials
 * How to install `docker` for Windows [docs.docker.com](https://docs.docker.com/desktop/install/windows-install/)
