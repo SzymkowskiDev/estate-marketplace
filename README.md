@@ -52,10 +52,9 @@ Step 9. Run the app:
 
 ## 📅 Development schedule
 
-- 20/05/2023: Introductory meeting & Start of Sprint 1
-- 03/06/2023: Sprint 1 review
-- 17/06/2023: Sprint 2 review
-- (01/07/2023: Sprint 3 review & Demo Day) optional
+- 27/05/2023: Introductory meeting & Start of Sprint 1
+- 10/07/2023: Sprint 1 review
+- 24/07/2023: Sprint 2 review
 
 **Pre-development: System Architecture**
 
@@ -65,20 +64,18 @@ Step 9. Run the app:
 - [x] Django skeleton
 - [x] FastAPI skeleton
 
-**REST API development - Microservices (FastAPI)**
+**Development - Microservices (FastAPI) & Django App**
 
-- [ ] `auth` Authentication
-- [ ] `buyers_client` CRUD operations on Buyers table
-- [ ] `sellers_client` CRUD operations on Sellers table
-- [ ] `analytics_client` Produces statistics from Offers table
-
-**Web app development (Django)**
-
-- [ ] Authentication
-- [ ] Seller panel makes requests to `buyers_client`
-- [ ] Buyer panel makes requests to `sellers_client` and `buyers_client`
-- [ ] Admin panel - views all data
-- [ ] Analytics panel
+- [ ] `interactive-map`
+- [ ] `data-migration`
+- [ ] `offers-listing`
+- [ ] `mortgage-advisor`
+- [ ] `analytics-client`
+- [ ] `msgs`
+- [ ] `transation-system`
+- [ ] `auth`
+- [ ] `micro-arch`
+- [ ] `row-level-security`
 
 
 ## 🗃️ Data
