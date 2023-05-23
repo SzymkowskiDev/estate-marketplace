@@ -65,7 +65,7 @@ Step 9. Run the app:
 - [x] FastAPI skeleton
 
 **Development - Microservices (FastAPI) & Django App**
-
+test
 - [ ] `interactive-map`
 - [ ] `data-migration`
 - [ ] `offers-listing`
