@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class EstateMarketplaceConfig(AppConfig):
+class OffersConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'estate_marketplace'
+    name = 'offers'
