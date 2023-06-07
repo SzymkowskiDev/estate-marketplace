@@ -54,8 +54,8 @@ Step 9. Run the app:
 ## 📅 Development schedule
 
 - 27/05/2023: Introductory meeting & Start of Sprint 1
-- 10/07/2023: Sprint 1 review
-- 24/07/2023: Sprint 2 review
+- 10/06/2023: Sprint 1 review
+- 24/06/2023: Sprint 2 review
 
 **Pre-development: System Architecture**
 
