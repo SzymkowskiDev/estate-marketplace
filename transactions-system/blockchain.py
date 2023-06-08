@@ -1,3 +1,50 @@
+"""
+Blockchain used in transactions system.
+
+Usage:
+
+create Chain object.
+>>> chain = Chain()
+or, if there is exported chain
+>>> chain = Chain("path/to/exported/chain.")
+
+when there is transaction, create block.
+seller_id: 0, buyer_id: 1, offer_id: 2, price: 100
+>>> block = Block(0, 1, 2, 100)
+now, add this block to chain.
+>>> chain.append_block(block)
+or, You can safely use new Chain instance
+>>> Chain().append_block(block)
+
+You can also add more than one block using another method
+>>> block1 = Block(1, 1, 1, 100)
+>>> block2 = Block(2, 2, 2, 200)
+>>> block3 = Block(3, 3, 3, 300)
+>>> chain.bulk_append(block1, block2, block3)
+
+At any moment, you can validate chain as every block has
+a HASH dynamically generated according to it's data, so 
+any change made to block changes it's HASH. Every next
+block contains HASH of previous.
+>>> chain.validate_stack()
+this method checks data of every block and compares HASHES.
+If any block has been changed, stack will be truncated removing
+all blocks ahead including changed one.
+
+To safely save chain's data, You can export it to any file.
+>>> chain.export_chain("/path/to/export/")
+If path doesn't exists, IT WILL BE CREATED.
+
+
+If any chain instance exists, creating new ones will return currently
+existing instance instead of creating a new one. It means, you can
+create as many instances as you want and they will still be the same
+as first one created at current session. 
+
+So if instance of Chain was created in current session, then:
+>>> chain = Chain()  # first time call
+>>> chain == Chain()  # -> True
+"""
 import hashlib
 import logging
 import os
