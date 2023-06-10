@@ -1,3 +1,6 @@
+'''
+First attempt to update latitude and longitude for offers. It updated only half of the offers. Better solution is to use Google API -> update_location2.py
+'''
 import os 
 import django
 from geopy.geocoders import Nominatim
