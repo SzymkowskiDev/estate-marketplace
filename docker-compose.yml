@@ -1,8 +1,7 @@
 version: '3'
 services:
   db:
-    build:
-      context: ./postgres
+    image: postgres:latest
     ports:
       - "5432:5432"
     volumes:
@@ -19,9 +18,62 @@ services:
     networks:
       - scrap-masters
 
+  fastapi_db:
+    image: postgres:latest
+    ports:
+      - "5343:5342"
+    networks:
+      - scrap-masters
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - fastapi-db-data:/var/lib/postgresql/data
+  fastapi:
+    profiles:
+      - prod
+    build:
+      context: ./fastapi_app
+    env_file:
+      - .env
+    ports:
+      - "8000:80"
+    networks:
+      - scrap-masters
+    depends_on:
+      - db
+      - redis
+      - fastapi_db
+      
+  fastapi-dev:
+    profiles:
+      - dev
+    build:
+      context: ./fastapi_app
+    ports:
+      - "8000:80"
+    env_file:
+      - .env    
+    volumes:
+      - ./fastapi_app:/src
+    command:
+      # - bash
+      ["poetry", "run", "uvicorn", "app.main:app", "--reload", "--host=0.0.0.0", "--port=80"]
+    tty: true
+    networks:
+      - scrap-masters
+    depends_on:
+      - db
+      - redis      
+      - fastapi_db
+
+
 volumes:
   dbdata:
   redisdata:
+  fastapi-db-data:
 
 
 networks:
