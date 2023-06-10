@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>estate offers map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css" />
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        var map = L.map('map').setView([52.06, 19.25], 7);  
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        var markers = L.markerClusterGroup();
+
+        $.getJSON("/offers/data/", function (data) {
+            var geoJsonLayer = L.geoJson(data, {
+                onEachFeature: function (feature, layer) {
+                    layer.bindPopup(
+                        '<h3>' + feature.properties.title + '</h3>' +
+                        '<p>Price: ' + feature.properties.price +  ' zł</p>' +
+                        '<p>Area: ' + feature.properties.area + ' m2</p>' +
+                        '<p>Price per m2: ' + feature.properties.price_per_meter + ' zł</p>' +
+                        '<p>Location: ' + feature.properties.location + '</p>' +
+                        '<p> link: <a href="' + feature.properties.link + '">' + feature.properties.link + '</a></p>'
+                    ); 
+                }
+            });
+            markers.addLayer(geoJsonLayer);
+            map.addLayer(markers);
+        });
+    </script>
+</body>
+</html>
