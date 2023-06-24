@@ -48,7 +48,7 @@ So if instance of Chain was created in current session, then:
 >>> chain = Chain()  # first time call
 >>> chain == Chain()  # -> True
 """
-from typing import Callable
+from typing import Callable, List
 import hashlib
 import logging
 import os
@@ -72,6 +72,9 @@ class Block:
     def __str__(self) -> str:
         return self.generate_hash()
 
+    def __repr__(self) -> str:
+        return f"<Block: {self.generate_hash()} content: {self.seller_id} {self.buyer_id} {self.offer_id} {self.price}>"
+
     def as_tuple(self) -> tuple:
         """ -> (hash, previous_hash, seller_id, buyer_id, offer_id, price) """
         return (self.generate_hash(), self.previous_hash, self.seller_id, self.buyer_id, self.offer_id, self.price) 
@@ -88,7 +91,15 @@ class Block:
         data = self.generate_data_chain()
         hashed_data = hashlib.sha256(data.encode()).hexdigest()
         return hashed_data
-    
+
+
+def default_validation_error_handler(blocks: List[Block]) -> None:
+    """ Log data of all removed blocks in validation error. """
+    logger.info("=== BLOCKS AFFECTED BY VALIDATION ERROR ===")
+    for block in blocks:
+        logger.info(f" > {block.generate_data_chain()}")
+    logger.info("=== END OF OUTPUT ===")
+
 
 class Chain:
     """ Connects blocks, assigns previous hashes to new blocks. 
@@ -98,7 +109,7 @@ class Chain:
     on_validation_error is object's variable used for handling 
     blocks affected (removed) by illegal block. Value must be callable."""
     instance: "Chain" = None
-    on_validation_error: Callable = None
+    on_validation_error: Callable = default_validation_error_handler
 
     @staticmethod
     def build_from_file(path: str) -> "Chain":
@@ -134,7 +145,7 @@ class Chain:
     def __new__(cls, *args, **kwargs):
         if cls.instance is None:
             cls.instance = object.__new__(cls, *args, **kwargs)
-            logger.info("Chain: Created Chain instance.")
+            logger.info("Chain: Created new Chain.")
         return cls.instance
 
     def __init__(self) -> None:
@@ -172,7 +183,7 @@ class Chain:
             
             if self.stack[index+1].previous_hash != block.generate_hash():
                 invalid_block = self.stack[index+1]
-                removed_blocks = self.stack[index+1:]
+                removed_blocks = self.stack[index:]
                 self.stack = self.stack[0:index]
                 logger.error(f"Chain: Found invalid block in stack. Stack has been truncated by {len(removed_blocks)} blocks (HASH:{invalid_block.generate_hash()})")
                 
